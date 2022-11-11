@@ -1,0 +1,11 @@
+<ng-container *ngIf="dialog$ | async as dialog">
+  <h1>{{ dialog.title }}</h1>
+
+  <ng-container *ngIf="dialog.messages as messages">
+    <ng-container *ngFor="let message of messages">
+      {{ message | json }}
+      <!--      ToDo may be Web Component?-->
+    </ng-container>
+  </ng-container>
+</ng-container>
+

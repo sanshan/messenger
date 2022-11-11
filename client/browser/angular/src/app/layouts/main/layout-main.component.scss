@@ -1,0 +1,51 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: aqua;
+
+  .header {
+    display: flex;
+    width: 100%;
+    padding: 0 8px;
+    background-color: antiquewhite;
+  }
+
+  .main {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    height: 100vh;
+    background-color: burlywood;
+
+    .aside {
+      display: flex;
+      width: 320px;
+      padding: 0 8px;
+      flex-direction: column;
+      background-color: azure;
+    }
+
+    .content {
+      display: flex;
+      width: 100%;
+      padding: 0 8px;
+      flex-direction: column;
+      background-color: white;
+
+      //ToDo simplify this hack
+      ::ng-deep router-outlet + * {
+        height: 100%;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    width: 100%;
+    padding: 0 8px;
+    background-color: antiquewhite;
+  }
+}
+
+

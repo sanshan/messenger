@@ -1,0 +1,17 @@
+<form [formGroup]="loginForm" (ngSubmit)="loginFormSubmit(loginForm.value)">
+  <input class="login" type="text" name="login" formControlName="login"
+         [ngClass]="{ 'control-invalid': loginForm.controls['login'].invalid }">
+
+  <div *ngIf="loginForm.controls['login'].errors">
+    <span *ngFor="let loginErrorKey of loginErrors">{{ errors[loginErrorKey] }}. </span>
+  </div>
+
+  <input class="password" type="login-control" name="password" formControlName="password"
+         [ngClass]="{ 'control-invalid': loginForm.controls['password'].invalid }">
+
+  <div *ngIf="loginForm.controls['login'].errors">
+    Password is wrong.
+  </div>
+
+  <button [disabled]="loginForm.invalid" type="submit">Submit</button>
+</form>
