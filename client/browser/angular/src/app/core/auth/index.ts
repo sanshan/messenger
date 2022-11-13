@@ -1,2 +1,2 @@
-export * from './modules/authentication-form';
+export * from './components/authentications-form';
 export * from './services';

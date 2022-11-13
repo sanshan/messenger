@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { AuthenticationFormModule } from './modules/authentication-form';
+import { AuthenticationFormModule } from './components/authentications-form';
 
 
 

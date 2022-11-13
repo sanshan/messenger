@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { LoginFormComponent } from '@app/core/auth/modules/authentication-form';
+import { SignInFormComponent } from '@app/core/auth';
 
 export const mainScreen: Routes = [
   {
@@ -15,7 +15,7 @@ export const mainScreen: Routes = [
   {
     path: '',
     outlet: 'content',
-    component: LoginFormComponent
+    component: SignInFormComponent
   },
   {
     path: '',
